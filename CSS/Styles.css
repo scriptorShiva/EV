@@ -1,0 +1,1029 @@
+/* for smoooth scrolling */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* transition: scrolled 1s ease; */
+}
+
+/* dark mode */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+.dark-theme {
+  --bg-color: #000106e8;
+  --text-color: #fff;
+}
+
+/* navbar */
+.navbar {
+  background-color: var(--bg-color);
+  font-weight: 600;
+  padding-left: 20px;
+  transition-property: background-color;
+  transition-duration: 2s;
+  z-index: 50;
+}
+
+.nav-item {
+  padding-left: 45px;
+}
+.contact-tooltip {
+}
+
+.nav-link-color {
+  color: var(--text-color);
+}
+
+.logo-text-A {
+  color: #4e9f3d;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo-text-B {
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-scrolled {
+  background-color: #eef8e0;
+}
+
+/* loader svg styles */
+.car-loading {
+  position: relative;
+  top: 20%;
+}
+
+/* car animation */
+#front-tyre,
+#back-tyre {
+  animation: windmill;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#car-body {
+  animation: body;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes body {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(30deg);
+  }
+}
+
+.loader-text {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  bottom: 8%;
+}
+
+/* loader */
+.preload {
+  background-color: white;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  transition: opacity 0.05s ease;
+}
+
+.preload-finish {
+  opacity: 0%;
+  pointer-events: none;
+}
+
+/* navbar sun to moon image */
+#moon-icon {
+  width: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* navbar padding media query */
+@media only screen and (max-width: 1140px) {
+  .nav-item {
+    padding-left: 10px;
+  }
+}
+
+/* navbar end */
+/* top-container */
+/* title area */
+
+.title {
+  font-family: "Poppins", sans-serif;
+  padding-top: 330px;
+  font-weight: bold;
+}
+
+.title-description {
+  font-size: 1.2rem;
+}
+
+/* text-type-animation */
+.text-type {
+}
+.text-type::after {
+  content: "";
+  position: absolute;
+  width: 0.25rem;
+  height: 3rem;
+  background-color: black;
+  animation: blink 500ms ease infinite;
+}
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* text-type-animation ends */
+
+.btn {
+  font-size: x-large;
+}
+
+/* svg animmation */
+#first-windmill {
+  animation: windmill;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: 64% 47%;
+  transform-box: fill-box;
+}
+
+#second-windmill {
+  animation: windmill;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: 60% 55%;
+  transform-box: fill-box;
+}
+
+#first-bird,
+#second-bird {
+  animation: bird;
+  animation-direction: alternate;
+  animation-duration: 200s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: top;
+}
+
+#first-leaf,
+#second-leaf,
+#third-leaf {
+  animation: leaf;
+  animation-direction: alternate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  transform-origin: left;
+}
+
+@keyframes leaf {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(20deg);
+  }
+}
+
+@keyframes windmill {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes bird {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+
+/* second-section */
+/* svg image */
+#freepik_stories-design-team:not(.animated) .animable {
+  opacity: 0;
+}
+
+#freepik_stories-design-team.animated #freepik--light-bulb--inject-23 {
+  animation: 1.5s Infinite linear heartbeat;
+  animation-delay: 0s;
+}
+
+#freepik_stories-design-team.animated #freepik--Screen--inject-23 {
+  animation: 6s Infinite linear floating;
+  animation-delay: 0s;
+}
+
+#freepik_stories-design-team.animated #freepik--character-1--inject-23 {
+  animation: 1.5s Infinite linear wind;
+  animation-delay: 0s;
+}
+
+#freepik_stories-design-team.animated #freepik--character-3--inject-23 {
+  animation: 1.5s Infinite linear wind;
+  animation-delay: 0s;
+}
+
+#freepik_stories-design-team.animated #freepik--character-2--inject-23 {
+  animation: 1.5s Infinite linear wind;
+  animation-delay: 0s;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.1);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floating {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes wind {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(1deg);
+  }
+
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+.about-section-bg {
+  background-color: #80808026;
+  padding-top: 50px;
+}
+
+.about,
+.about-description {
+  font-family: "Shippori Antique", sans-serif;
+  position: relative;
+  top: 30%;
+  padding-left: 2rem;
+}
+
+.about {
+  font-weight: bold;
+}
+
+.about-description {
+  color: grey;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-top: 10px;
+}
+
+/* 3rd section */
+.benifits {
+  text-align: center;
+  font-family: "Shippori Antique", sans-serif;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.vertical-line {
+  height: 3px;
+  width: 80px;
+  background-color: #a3bd80;
+  margin: auto;
+}
+
+/* benifits cards */
+.benifit-card-1,
+.benifit-card-2,
+.benifit-card-3 {
+  width: 320px;
+  height: 530px;
+  transition: 0.8s;
+}
+
+.benifit-card-1:hover,
+.benifit-card-2:hover,
+.benifit-card-3:hover {
+  animation: animate-cards;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  box-shadow: 0 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes animate-cards {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* cards description */
+.card-heading {
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: "Shippori Antique", sans-serif;
+  font-weight: 600;
+}
+
+.card-description {
+  font-family: "Shippori Antique", sans-serif;
+  color: grey;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 15px;
+}
+
+/* fourth section */
+.services-background {
+  background-color: #80808026;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.services {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Shippori Antique", sans-serif;
+  font-weight: bold;
+  padding-top: 5px;
+}
+.services-row {
+  padding-bottom: 6%;
+}
+.services-padding {
+  padding-bottom: 10%;
+}
+
+.vertical-line-2 {
+  height: 3px;
+  width: 150px;
+  background-color: #a3bd80;
+  margin: auto;
+}
+
+/* fourth section cards */
+.card-titles {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.services-card-1 {
+  background-image: url(car.png);
+}
+
+.services-card-2 {
+  background-image: url(bike.png);
+}
+
+.services-card-3 {
+  background-image: url(scooty.png);
+}
+
+.services-card-4 {
+  background-image: url(cycle.png);
+}
+
+.services-card-1,
+.services-card-2,
+.services-card-3,
+.services-card-4 {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  margin-right: 30px;
+  transition: 0.8s;
+  margin-left: 10%;
+  color: transparent;
+  padding-bottom: 30px;
+}
+
+.card-btn {
+  position: relative;
+  top: 70%;
+  left: 20%;
+  padding: 5px 40px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: 1s;
+}
+
+.card-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 10px;
+  background-color: #8cba51;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms ease-in-out;
+}
+
+.card-btn:hover::before,
+.card-btn:focus::before {
+  transform: scaleX(1);
+}
+
+.card-btn:focus::before {
+  transform: scaleX(1);
+}
+
+/* binding card and button hover together */
+.hover-bind:hover .services-card-1 {
+  animation: animate-cards;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  color: #8cba51;
+  background-color: white;
+}
+
+.hover-bind:hover .services-card-2 {
+  animation: animate-cards;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  color: #8cba51;
+  background-color: white;
+}
+
+.hover-bind:hover .services-card-3 {
+  animation: animate-cards;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  color: #8cba51;
+  background-color: white;
+}
+
+.hover-bind:hover .services-card-4 {
+  animation: animate-cards;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  color: #8cba51;
+  background-color: white;
+}
+
+.hover-bind:hover .card-btn {
+  color: white;
+  font-weight: bold;
+  transform: scale(0.8);
+}
+
+.hover-bind:hover .card-btn::before {
+  transform: scaleX(1);
+}
+
+@keyframes animate-cards {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* fifth section */
+/* svg animation maps */
+#freepik_stories-gps-navigator:not(.animated) .animable {
+  opacity: 0;
+}
+
+#freepik_stories-gps-navigator.animated #freepik--Device--inject-84 {
+  animation: 3s Infinite linear floating;
+  animation-delay: 0s;
+}
+
+#freepik_stories-gps-navigator.animated #freepik--Character--inject-84 {
+  animation: 1.5s Infinite linear wind;
+  animation-delay: 0s;
+}
+
+@keyframes floating {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes wind {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(1deg);
+  }
+
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+.charging-center {
+  padding-top: 30%;
+  font-weight: bold;
+  font-family: "Shippori Antique", sans-serif;
+  line-height: 1.4;
+}
+
+.charging-center-description {
+  color: grey;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-top: 10px;
+  padding-right: 200px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.charging-center-btn {
+  border-radius: 30px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  background: #a2d45d;
+  padding: 5px 30px 10px 20px;
+}
+
+.charging-center-btn:hover {
+  background: #b2db51;
+}
+
+/* sixth section */
+.contact-us-heading {
+  font-weight: bold;
+  font-family: "Shippori Antique", sans-serif;
+  line-height: 1.4;
+  padding-top: 50px;
+}
+
+.contact-us-description {
+  color: grey;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-top: 10px;
+  padding-right: 200px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+/* contact us svg */
+#freepik_stories-example:not(.animated) .animable {
+  opacity: 0;
+}
+
+#freepik_stories-example.animated #freepik--speech-bubble--inject-182 {
+  animation: 1.5s Infinite linear heartbeat;
+  animation-delay: 0s;
+}
+#freepik_stories-example.animated #freepik--Character--inject-182 {
+  animation: 1.5s Infinite linear wind;
+  animation-delay: 0s;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.1);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wind {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(1deg);
+  }
+
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+/* btn */
+.contact-us-btn {
+  border-radius: 30px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  background: #a2d45d;
+  padding: 5px 30px 5px 20px;
+}
+
+.contact-us-btn:hover {
+  background: #b2db51;
+}
+
+.contact-us-area {
+  padding-left: 20px;
+}
+.bottom-titles {
+  font-weight: bold;
+  font-family: "Shippori Antique", sans-serif;
+  line-height: 1.4;
+  padding-top: 50px;
+}
+.bottom-description {
+  color: grey;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-top: 10px;
+  padding-right: 200px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+/* last section area */
+.last-section-bg {
+  background-color: #f0f9e3;
+}
+.last-bg-change {
+  background-color: black;
+}
+.last-section-padding {
+  padding: 50px;
+}
+.icons-row {
+  padding-left: 100px;
+}
+.bottom-icons {
+  width: 30px;
+  margin-right: 40px;
+}
+
+/* media Queries */
+/* top containre media query */
+@media only screen and (max-width: 1400px) {
+  .title {
+    font-size: 35px;
+    padding-top: 300px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .title {
+    font-size: 30px;
+    padding-top: 250;
+  }
+
+  .btn {
+    font-size: larger;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .title {
+    font-size: 25px;
+    padding-top: 200px;
+  }
+
+  .title-description {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: large;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .title {
+    font-size: 20px;
+    padding-top: 150px;
+  }
+
+  .title-description {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 20px;
+    padding-top: 90px;
+    text-align: center;
+  }
+
+  .title-description {
+    text-align: center;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title-description {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: small;
+  }
+}
+
+/* temporary media only on below 768px screen width size */
+
+@media only screen and (max-width: 768px) {
+  /* section 2 */
+
+  .text-type::after {
+    display: none;
+  }
+  .about-us-svg {
+    display: none;
+  }
+
+  .about,
+  .about-description {
+    position: relative;
+    top: 0;
+  }
+
+  .about {
+    font-size: 20px;
+    text-align: center;
+  }
+  .about-description {
+    color: grey;
+    font-size: 1.1rem;
+    line-height: 1.5;
+
+    font-size: 16px;
+  }
+
+  /* third section */
+  .benifits {
+    font-size: 20px;
+  }
+
+  .benefits-query {
+    width: 350px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+
+  /* fourth section */
+  .card-heading {
+    font-size: 20px;
+  }
+  .card-description {
+    font-size: 16px;
+  }
+
+  .services {
+    font-size: 20px;
+    padding-top: 0px;
+  }
+  .services-query {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+  .services-card-1,
+  .services-card-2,
+  .services-card-3,
+  .services-card-4 {
+    width: 300px;
+  }
+  .card-titles {
+    font-size: 20px;
+  }
+  .card-btn {
+    font-size: 16px;
+  }
+  .services-padding {
+    padding-bottom: 0;
+  }
+
+  /* fifth section */
+  .charging-center-svg {
+    display: none;
+  }
+  .charging-center-query {
+    text-align: center;
+  }
+  .charging-center {
+    padding-top: 10%;
+    text-align: center;
+    font-size: 20px;
+  }
+  .charging-center-description {
+    font-size: 16px;
+    padding-top: 3%;
+    padding-right: 0;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .charging-center-btn {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  /* sixth section */
+  .contact-svg {
+    display: none;
+  }
+  .contact-us-heading {
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .contact-us-description {
+    font-size: 16px;
+
+    padding-top: 10px;
+    padding-right: 0;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .contact-us-btn {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5px 30px 5px 20px;
+  }
+
+  .email {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .contact-us-area {
+    text-align: center;
+    padding-left: 20px;
+  }
+
+  /* last section */
+  .icon-query {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .last-bg-change {
+    font-size: 10px;
+  }
+
+  .bottom-icons {
+    width: 20px;
+  }
+  .bottom-titles {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Shippori Antique", sans-serif;
+    line-height: 1.4;
+    padding-top: 10px;
+    font-size: 18px;
+  }
+  .bottom-description {
+    font-size: 10px;
+
+    padding-top: 13px;
+    padding-right: 0;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .pc-view {
+  }
+  .pc-view::before {
+    content: "If you see this webiste on dekstop-mode it looks little-more beautiful than this...";
+    font-size: 12px;
+    color: rgba(255, 10, 255, 0.938);
+    font-weight: bold;
+  }
+  /* media query ends */
+}
